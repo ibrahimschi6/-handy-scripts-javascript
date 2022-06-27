@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS CSV Export</title>
+    <script src="js-csv-export.js"></script>
+    <script>
+      const buttonClick = () => {
+        const list = [
+          {
+            name: "Mehmet",
+            surname: "Yilmaz",
+            amount: 25.65,
+          },
+          {
+            name: "Ayse",
+            surname: "Yilmaz",
+            amount: 7.11,
+          },
+          {
+            name: "Deniz",
+            surname: "Yavuz",
+            amount: 34.62,
+          },
+        ];
+
+        const fileName = document.getElementById("fileName").value;
+        exportToCsv(list, fileName);
+      };
+    </script>
+  </head>
+  <body>
+    <input id="fileName" value="EmployeeList.csv" />
+    <button onclick="buttonClick()">Download</button>
+  </body>
+</html>
